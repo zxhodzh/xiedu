@@ -1,0 +1,126 @@
+[gd_scene load_steps=10 format=3 uid="uid://cg7m5xigl1ho2"]
+
+[ext_resource type="Texture2D" uid="uid://cv8anyseossur" path="res://资料/tilesetcave.png" id="1_lsh3c"]
+[ext_resource type="Texture2D" uid="uid://c5a1d8ydjth4o" path="res://资料/Background Cave/01 bg.png" id="2_8dtmf"]
+[ext_resource type="Texture2D" uid="uid://dl4kfnk30ijki" path="res://资料/Background Cave/02 bg2.png" id="3_tb75u"]
+[ext_resource type="Texture2D" uid="uid://ispv5bdp50rb" path="res://资料/Background Cave/03 water.png" id="4_fx3mu"]
+[ext_resource type="Texture2D" uid="uid://bkuuyv4vji0dy" path="res://资料/Background Cave/04 rocksback.png" id="5_nptqm"]
+[ext_resource type="Texture2D" uid="uid://bwaovqwg71evm" path="res://资料/Background Cave/05 rocksfront.png" id="6_vl7nn"]
+[ext_resource type="PackedScene" uid="uid://c1p8expng54j3" path="res://场景/玩家player.tscn" id="7_rm7yb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1nifj"]
+texture = ExtResource("1_lsh3c")
+6:1/size_in_atlas = Vector2i(2, 2)
+6:1/0 = 0
+6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/size_in_atlas = Vector2i(2, 2)
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+7:11/size_in_atlas = Vector2i(6, 2)
+7:11/0 = 0
+7:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:11/0/physics_layer_0/angular_velocity = 0.0
+7:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(48.7904, -15.5563, 48.5, 15.5, -47.3762, 16.2635, -48.7904, -16.2635)
+4:4/size_in_atlas = Vector2i(2, 6)
+4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.5563, -48.7904, 15.5, -48.5, 16.2635, 47.3762, -16.2635, 48.7904)
+7:4/size_in_atlas = Vector2i(6, 2)
+7:4/0 = 0
+7:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:4/0/physics_layer_0/angular_velocity = 0.0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(48.7904, -15.5563, 48.5, 15.5, -47.3762, 16.2635, -48.7904, -16.2635)
+7:8/size_in_atlas = Vector2i(6, 2)
+7:8/0 = 0
+7:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:8/0/physics_layer_0/angular_velocity = 0.0
+7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(48.7904, -15.5563, 48.5, 15.5, -47.3762, 16.2635, -48.7904, -16.2635)
+7:6/size_in_atlas = Vector2i(2, 2)
+7:6/0 = 0
+7:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:6/0/physics_layer_0/angular_velocity = 0.0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.5564, -16.2635, 16.2635, 15.2028, -16.2635, 15.2028, -16.2635, -15.9099)
+11:6/size_in_atlas = Vector2i(2, 2)
+11:6/0 = 0
+11:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:6/0/physics_layer_0/angular_velocity = 0.0
+11:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.5564, -16.2635, 16.2635, 15.2028, -16.2635, 15.2028, -16.2635, -15.9099)
+
+[sub_resource type="TileSet" id="TileSet_axldq"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_1nifj")
+
+[node name="世界场景" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-231.0]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_axldq")
+format = 2
+layer_0/tile_data = PackedInt32Array(786435, 458752, 11, 786441, 458752, 11, 786446, 458752, 11, 786452, 458752, 11, 786456, 458752, 11, 786436, 458752, 11, 786461, 458752, 11, 851960, 458752, 11, 786466, 458752, 11, 0, 458752, 4, 6, 458752, 4, 11, 458752, 4, 13, 458752, 4, 17, 458752, 4, 23, 458752, 4, 28, 458752, 4, 33, 458752, 4, 65530, 458752, 4, 65526, 458752, 4, 38, 458752, 4, 655391, 393216, 1, 917501, 458752, 11, 917496, 458752, 11, 786422, 458752, 11, 917494, 458752, 11, 851971, 458752, 11, 851977, 458752, 11, 851983, 458752, 11, 851989, 458752, 11, 851995, 458752, 11, 852001, 458752, 11, 852004, 458752, 11, 786470, 458752, 11, 852010, 458752, 11, 786476, 458752, 11, 720943, 458752, 11, 852015, 458752, 11, 786420, 458752, 11, 917492, 458752, 11, 65523, 458752, 11, 42, 458752, 11, 47, 458752, 11, 655403, 262144, 1)
+
+[node name="背景" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="背景"]
+scroll_offset = Vector2(0.1, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="背景/ParallaxBackground"]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="背景/ParallaxBackground/ParallaxLayer"]
+scale = Vector2(3, 1.35)
+texture = ExtResource("2_8dtmf")
+centered = false
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="背景"]
+scroll_offset = Vector2(0.3, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="背景/ParallaxBackground2"]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="背景/ParallaxBackground2/ParallaxLayer"]
+scale = Vector2(3, 1.35)
+texture = ExtResource("3_tb75u")
+centered = false
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="背景"]
+scroll_offset = Vector2(0.5, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="背景/ParallaxBackground3"]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="背景/ParallaxBackground3/ParallaxLayer"]
+scale = Vector2(3, 1.35)
+texture = ExtResource("4_fx3mu")
+centered = false
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="背景"]
+scroll_offset = Vector2(0.7, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="背景/ParallaxBackground4"]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="背景/ParallaxBackground4/ParallaxLayer"]
+scale = Vector2(3, 1.35)
+texture = ExtResource("5_nptqm")
+centered = false
+
+[node name="ParallaxBackground5" type="ParallaxBackground" parent="背景"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="背景/ParallaxBackground5"]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="背景/ParallaxBackground5/ParallaxLayer"]
+scale = Vector2(3, 1.35)
+texture = ExtResource("6_vl7nn")
+centered = false
+
+[node name="玩家player" parent="." instance=ExtResource("7_rm7yb")]
+position = Vector2(211, 169)
+
+[node name="Camera2D" type="Camera2D" parent="玩家player"]
+limit_left = -230
+limit_right = 800
+limit_bottom = 230
